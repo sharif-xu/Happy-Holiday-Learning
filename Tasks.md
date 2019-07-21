@@ -45,5 +45,6 @@
    show()
    ```
 
-2.  using K-means to classify
+2. using K-means to classify
+
 
