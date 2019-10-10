@@ -12,3 +12,4 @@ def scatter_base() -> Scatter:
     )
     return c
 
+scatter_base().render()

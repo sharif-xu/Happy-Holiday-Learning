@@ -5,6 +5,7 @@ from sklearn.cluster import KMeans
 # 随机生成20个点
 n=20
 X=np.random.normal(0,1,n)#每一个点的X值，正态分布
+
 Y=np.random.normal(0,1,n)#每一个点的Y值
 Z=np.array(list(zip(X,Y))).reshape(len(X),2)
 # 单独取出x矩阵，y矩阵
@@ -37,15 +38,15 @@ def scatter_base() -> Scatter:
         # .add_xaxis(centroids[0:1,0])
         # .add_yaxis("Y_0", centroids[0:1,1], color='yellow', symbol='rect')
         .add_xaxis(Z_0[:,0])
-        .add_yaxis("Y_0", Z_0[:,1], color='black')
+        .add_yaxis("Y_0", Z_0[:,1], color='red')
         # .add_xaxis(centroids[1:2,0])
         # .add_yaxis("Y_0", centroids[1:2,1], color='yellow', symbol='rect')
         .add_xaxis(Z_1[:,0])
-        .add_yaxis("Y_1", Z_1[:,1], color='blue')
+        .add_yaxis("Y_1", Z_1[:,1], color='yellow')
         # .add_xaxis(centroids[2:3,0])
         # .add_yaxis("Y_0", centroids[2:3,1], color='yellow', symbol='rect')
         .add_xaxis(Z_2[:,0])
-        .add_yaxis("Y_2", Z_2[:,1], color='red')
+        .add_yaxis("Y_2", Z_2[:,1], color='blue')
         .set_global_opts(
             title_opts=opts.TitleOpts(title="KMeans"),
             xaxis_opts=opts.AxisOpts(
