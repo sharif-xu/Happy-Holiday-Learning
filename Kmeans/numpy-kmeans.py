@@ -8,7 +8,7 @@ import matplotlib as mpl
 from scipy.spatial.distance import cdist  # 模块一
 from sklearn import metrics  # 模块一
 
-# 从磁盘读取城市经纬度数据
+# 从磁盘读取数据
 X = []
 f = open('city.txt')
 for v in f:

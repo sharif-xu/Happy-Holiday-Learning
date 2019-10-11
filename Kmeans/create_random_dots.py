@@ -12,4 +12,3 @@ for i in range(20):
 
 show()
 print(all_points)
-

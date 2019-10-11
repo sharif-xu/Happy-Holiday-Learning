@@ -4,9 +4,10 @@ import numpy as np
 from sklearn.cluster import KMeans
 # 随机生成20个点
 n=20
-X=np.random.normal(0,1,n)#每一个点的X值，正态分布
-
-Y=np.random.normal(0,1,n)#每一个点的Y值
+#每一个点的X值，正态分布
+X=np.random.normal(0,1,n)
+#每一个点的Y值
+Y=np.random.normal(0,1,n)
 Z=np.array(list(zip(X,Y))).reshape(len(X),2)
 # 单独取出x矩阵，y矩阵
 Zx, Zy=Z[:,0], Z[:,1]
@@ -38,23 +39,23 @@ def scatter_base() -> Scatter:
         # .add_xaxis(centroids[0:1,0])
         # .add_yaxis("Y_0", centroids[0:1,1], color='yellow', symbol='rect')
         .add_xaxis(Z_0[:,0])
-        .add_yaxis("Y_0", Z_0[:,1], color='red')
+        .add_yaxis("第一类点", Z_0[:,1], color='red')
         # .add_xaxis(centroids[1:2,0])
         # .add_yaxis("Y_0", centroids[1:2,1], color='yellow', symbol='rect')
         .add_xaxis(Z_1[:,0])
-        .add_yaxis("Y_1", Z_1[:,1], color='yellow')
+        .add_yaxis("第二类点", Z_1[:,1], color='yellow')
         # .add_xaxis(centroids[2:3,0])
         # .add_yaxis("Y_0", centroids[2:3,1], color='yellow', symbol='rect')
         .add_xaxis(Z_2[:,0])
-        .add_yaxis("Y_2", Z_2[:,1], color='blue')
+        .add_yaxis("第三类点", Z_2[:,1], color='blue')
         .set_global_opts(
             title_opts=opts.TitleOpts(title="KMeans"),
             xaxis_opts=opts.AxisOpts(
                 type_="value",
-                min_=-3
+                min_=-2
                 ),
             yaxis_opts=opts.AxisOpts(
-                min_=-3
+                min_=-2
                 )
             )
     )
